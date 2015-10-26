@@ -1,9 +1,13 @@
 #!/bin/sh
- 
+
+# Generate key with
+# ddns-confgen -r /dev/urandom -q -a hmac-md5 -k home.iegget.no -s home.iegget.no. | tee -a /etc/bind/keys/home.iegget.no.keys > /etc/bind/keys/key.home.iegget.no
+
 # set some variables
-zone=lek.iegget.no
+zone=home.iegget.no
 dnsserver=ns1.iegget.no
-keyfile=/home/iver/scripts/key.lek.iegget.no
+#keyfile=/home/iver/scripts/key.lek.iegget.no
+keyfile=home.key
 #
  
 # get current external address
