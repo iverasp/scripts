@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Needs dnsutils in debian
+
 # Generate key with
 # ddns-confgen -r /dev/urandom -q -a hmac-md5 -k home.iegget.no -s home.iegget.no. | tee -a /etc/bind/keys/home.iegget.no.keys > /etc/bind/keys/key.home.iegget.no
 
