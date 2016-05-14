@@ -18,7 +18,9 @@ ext_ipv6=`curl --silent https://ipv6.icanhazip.com/`
  
 # get last ip address from the DNS server
 last_ipv4=`dig +short A @$dnsserver $zone`
-last_ipv6=`dig +short AAAA @$dnsserver $zone`
+if [ "$ipv6_enabled" = true ]; then
+    last_ipv6=`dig +short AAAA @$dnsserver $zone`
+fi
 if [ "$initial_run" = true ]; then
     last_ipv4="none"
     last_ipv6="none"
